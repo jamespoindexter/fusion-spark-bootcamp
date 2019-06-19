@@ -43,7 +43,7 @@ curl -X POST -H "Content-type:application/json" --data-binary '{
   "add-copy-field": [ { "source": "*", "dest": "_text_" } ]
 }' "http://$FUSION_SOLR/solr/eventsim/schema?updateTimeoutSecs=20"
 
-curl -XPOST -H "Content-type:application/json" -d '{
+curl -X POST -H "Content-type:application/json" -d '{
   "set-property": { "updateHandler.autoSoftCommit.maxTime":5000 }
 }' http://$FUSION_SOLR/solr/eventsim/config
 
